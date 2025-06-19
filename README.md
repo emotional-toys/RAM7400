@@ -69,7 +69,7 @@ Assume that `NOT Q` is high. When a `HIGH` signal is sent to the clock and data,
 
 In order to use the same pin to send and receive data, add a resistor and diode between the `Q` and `Data` signals. The diode is needed because the latch can be affected by changes on the `Q` pin and diodes restrict the current direction from `Q` to `Data`. The resistor is needed to limit the current going from `Q` to `Data`; otherwise without it, the latch would malfunction since `Q` would be pulled to ground.
 
-_Using the Arduino_
+_Using the Arduino as a testing environment_
 
 Use the 8-bit port to connect the data lines to and one more pin as the write enable. Follow the C-code file.
 
