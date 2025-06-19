@@ -4,7 +4,7 @@ Self-satisfaction storage on the metal. On a breadboard and wired to the ideal-t
 
 ### Background
 
-Implement [this](https://www.instructables.com/DIY-RAM-for-Your-Micro/) idea to test whether or not this will work in how it is being functionally perceived. A choice lies between TTL and newer CMOS production chips in the model.
+Implementing [this](https://www.instructables.com/DIY-RAM-for-Your-Micro/) to test whether or not this will behave differently in its manifest functionally as compared to 74HC74.
 
 #### Using 74HC00 (CMOS)
 
