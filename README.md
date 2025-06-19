@@ -40,7 +40,8 @@ One byte of RAM read/writable testing via an (old) Arduino Uno.
 Parts required for this feature are:
 
 * 8 74LS00 Quad NAND IC
-* 8 4.7k -10k resistors
+* 8 4.7k resistors (D latch)
+* 8 10k resistors (pullup)
 * 2 0.1uF capacitors
 * 8 1N4148 diodes
 * A 16cm breadboard with 63 rows
