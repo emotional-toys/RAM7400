@@ -59,9 +59,9 @@ The RAM layout is done; however, the input cannot be connected to the output, me
 
 Add a diode from the `Q` pin (either 10 or 11) to a free row on the breadboard.  The black strip on the diode should be toward the free row pin.  If it is toward the connection to the `Q` pin, it needs to be flipped around.  Connect the diode to the Data input pin (pin 1) using the resistor. Repeat for all 8 chips.
 
-IMAGES
+![board-diodes-resistors](/images/board-diodes-resistors.jpg)
 
-The D-latch is a neat device: It can store a bit by only changing when the clock signal is high, then it latches onto a bit. If `Q` is on, it sends a `HIGH` signal to the input of `NOT Q`, turning-off `NOT Q`. This, in turn, sends a `LOW` to the input of `Q`, turning `Q` on - this is how it latches. 
+The D-latch is a neat device: It can store a bit by only changing when the clock signal is high, then it latches onto a bit. If `Q` is on, it sends a `HIGH` signal to the input of `NOT Q`, turning-off `NOT Q`. This, in turn, sends a `LOW` to the input of `Q`, turning `Q` on - this is how it latches. Note that in less-experimental future versions, a 74HC74 would be considered.
 
 _Scenario_
 
@@ -69,7 +69,7 @@ Assume that `NOT Q` is high. When a `HIGH` signal is sent to the clock and data,
 
 In order to use the same pin to send and receive data, add a resistor and diode between the `Q` and `Data` signals. The diode is needed because the latch can be affected by changes on the `Q` pin and diodes restrict the current direction from `Q` to `Data`. The resistor is needed to limit the current going from `Q` to `Data`; otherwise without it, the latch would malfunction since `Q` would be pulled to ground.
 
-_Using the Arduino_
+_Using the Arduino as a testing environment_
 
 Use the 8-bit port to connect the data lines to and one more pin as the write enable. Follow the C-code file.
 
