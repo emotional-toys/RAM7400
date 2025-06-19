@@ -49,7 +49,7 @@ Parts required for this feature are:
 
 What is nice about this RAM is that each bit is self-contained on each chip.  This means that 8 chips = 1 byte (8 bits) or 4 chips = 1 nybble. With self contained RAM bits, it is a cleaner test-implementation for one breadboard - line the chips up down the board where the pins are oriented the same way. To implement a single D-latch using either a 74HC00 CMOS chip or a 74LS00 TTL chip, the key differences above is the pull-down resistors and the smoothing capacitor to configure the gates for the TTL. The CMOS does not require these. 
 
-![7400-diagram](/images/7400-diagram.jpg)
+![7400-diagram](/images/RAM7400.png)
 
 Shown here is the basic wiring diagram for each of the chips.  What it does is it turns the chip into a self-contained D-latch; remember that a D-latch consumes four NAND gates, which there are 4 NAND gates per chip. On the wiring diagram, the lines that connect the pins are wires that you need to place on each chip.  You do not need to place wires leading out on the `D`, `CLK`, `Q`, and `NOT Q`. Connect `COMM` and `5V` pins to the rails.
 
