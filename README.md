@@ -61,7 +61,7 @@ Add a diode from the `Q` pin (either 10 or 11) to a free row on the breadboard. 
 
 ![board-diodes-resistors](/images/board-diodes-resistors.jpg)
 
-The D-latch is a neat device: It can store a bit by only changing when the clock signal is high, then it latches onto a bit. If `Q` is on, it sends a `HIGH` signal to the input of `NOT Q`, turning-off `NOT Q`. This, in turn, sends a `LOW` to the input of `Q`, turning `Q` on - this is how it latches. 
+The D-latch is a neat device: It can store a bit by only changing when the clock signal is high, then it latches onto a bit. If `Q` is on, it sends a `HIGH` signal to the input of `NOT Q`, turning-off `NOT Q`. This, in turn, sends a `LOW` to the input of `Q`, turning `Q` on - this is how it latches. Note that in less-experimental future versions, a 74HC74 would be considered.
 
 _Scenario_
 
