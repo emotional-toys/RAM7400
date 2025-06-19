@@ -42,7 +42,7 @@ Parts required for this feature are:
 * 8 74LS00 Quad NAND IC
 * 8 4.7k resistors (D latch)
 * 8 10k resistors (pullup)
-* 2 0.1uF capacitors
+* 2 0.1uF decoupling capacitors
 * 8 1N4148 diodes
 * A 16cm breadboard with 63 rows
 * 8 LEDs
