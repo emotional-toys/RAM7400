@@ -8,19 +8,19 @@ Implementing [this](https://www.instructables.com/DIY-RAM-for-Your-Micro/) to te
 
 #### Using 74HC00 (CMOS)
 
-The 74HC00 is a quad 2-input NAND gate. To create a D-latch, you can use two NAND gates configured as a set-reset latch and additional gates to handle the D input and clock.
+The 74HC00 is a quad 2-input NAND gate. To create a `D`-latch, you can use two NAND gates configured as a set-reset latch and additional gates to handle the `D` input and clock.
 
 1. _Set-Reset Latch_: Use two NAND gates to create a set-reset latch. Connect the outputs of these gates to each other's inputs to form a cross-coupled configuration.
-2. _D Input and Clock_: Use additional NAND gates to handle the D input and clock signal. The D input and clock signal are combined to control the set and reset inputs of the latch.
-3. _Pull-Up Resistors_: CMOS inputs are high-impedance, so you can leave them floating.
+2. _`D` Input and Clock_: Use additional NAND gates to handle the `D` input and clock signal. The `D` input and clock signal are combined to control the set and reset inputs of the latch.
+3. _Pull-Up Resistors_: CMOS inputs are high-impedance so they can be left floating.
 
 #### Using 74LS00 (TTL)
 
-The 74LS00 is also a quad 2-input NAND gate but operates differently from CMOS. TTL inputs are not truly high-impedance when floating, so pull-up resistors are often necessary.
+The 74LS00 is a quad 2-input NAND gate but operates differently from CMOS. TTL inputs are not truly high-impedance when floating so pull-up resistors are necessary.
 
 1. _Set-Reset Latch_: Similar to the CMOS version, use two NAND gates to create a set-reset latch.
-2. _D Input and Clock_: Use additional NAND gates to handle the D input and clock signal. The configuration is similar to the CMOS version, but ensure the voltage levels are within the TTL specifications.
-3. _Pull-Up Resistors_: TTL inputs should be pulled up to Vcc with resistors (e.g., 1kΩ to 10kΩ) to ensure defined logic levels when the inputs are floating.
+2. _`D` Input and Clock_: Use additional NAND gates to handle the `D` input and clock signal. The configuration is similar to the CMOS version, but ensure the voltage levels are within the TTL specifications.
+3. _Pull-Up Resistors_: TTL inputs should be pulled up to `Vcc` with resistors (e.g., 1kΩ to 10kΩ) to ensure defined logic levels when the inputs are floating.
 
 #### Key Differences
 
