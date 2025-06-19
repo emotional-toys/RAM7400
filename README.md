@@ -29,7 +29,7 @@ The 74LS00 is a quad 2-input NAND gate but operates differently from CMOS. TTL i
 3. _Noise Immunity_: TTL chips have better noise immunity due to their specific voltage thresholds, while CMOS chips can be more susceptible to noise, especially at lower supply voltages.
 4. _Speed_: TTL chips are generally faster than CMOS chips, which can be beneficial for high-speed applications.
 
-By following these steps and considerations, you can implement a single D-latch using either a 74HC00 CMOS chip or a 74LS00 TTL chip. The wiring and logic design will differ due to the inherent characteristics of each logic family, but the basic concept of using NAND gates to create a set-reset latch and handle the D input and clock signal remains the same.
+By following these steps and considerations, you can implement a single `D`-latch using either a 74HC00 CMOS chip or a 74LS00 TTL chip. The wiring and logic design will differ due to the inherent characteristics of each logic family, but the basic concept of using NAND gates to create a set-reset latch and handle the D input and clock signal remains the same.
 
 ### Implementation
 
@@ -39,14 +39,14 @@ One byte of RAM read/writable testing via an (old) Arduino Uno.
 
 Parts required for this feature are:
 
-* 8 74LS00 Quad NAND IC
-* 8 4.7k resistors (D latch)
-* 8 10k resistors (pullup)
-* 2 0.1uF decoupling capacitors
-* 8 1N4148 diodes
-* A 16cm breadboard with 63 rows
-* 8 LEDs
-* 8 Resistors (current-limiting for the LEDs)
+* 8 - 74LS00 Quad NAND IC
+* 8 - 4.7k resistors (`D` latch)
+* 8 - 10k resistors (pullup)
+* 2 - 0.1uF decoupling capacitors
+* 8 - 1N4148 diodes
+* 1 - 16cm breadboard with 63 rows
+* 8 - Yellow LEDs
+* 8 - Resistors (current-limiting for the LEDs)
 
 What is nice about this RAM is that each bit is self-contained on each chip.  This means that 8 chips = 1 byte (8 bits) or 4 chips = 1 nybble. With self contained RAM bits, it is a cleaner test-implementation for one breadboard - line the chips up down the board where the pins are oriented the same way. To implement a single D-latch using either a 74HC00 CMOS chip or a 74LS00 TTL chip, the key differences above is the pull-down resistors and the smoothing capacitor to configure the gates for the TTL. The CMOS does not require these. 
 
