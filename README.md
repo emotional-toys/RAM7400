@@ -45,7 +45,8 @@ Parts required for this feature are:
 * 2 - 0.1uF decoupling capacitors
 * 8 - 1N4148 diodes
 * 1 - 16cm breadboard with 63 rows
-* 8 - Yellow LEDs
+* 4 - Yellow LEDs (Most-significant nibble)
+* 4 - Green LEDs (Least-significant nibble)
 * 8 - Resistors (current-limiting for the LEDs)
 
 What is nice about this RAM is that each bit is self-contained on each chip.  This means that 8 chips = 1 byte (8 bits) or 4 chips = 1 nybble. With self contained RAM bits, it is a cleaner test-implementation for one breadboard - line the chips up down the board where the pins are oriented the same way. To implement a single D-latch using either a 74HC00 CMOS chip or a 74LS00 TTL chip, the key differences above is the pull-down resistors and the smoothing capacitor to configure the gates for the TTL. The CMOS does not require these. 
