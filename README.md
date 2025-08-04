@@ -63,7 +63,7 @@ Shown here is the basic wiring diagram for each of the chips, representing one b
 
 ![pinid](/images/7400-pinid.jpg)
 
-All inputs are being used, so pulldowns are _not_ necessary.
+All inputs are being used, so pulldowns are _not_ necessary. The first-pass of wiring connections is in the following.
 
 ![wiring-block-01](/images/wiring-block-01.jpg)
 
