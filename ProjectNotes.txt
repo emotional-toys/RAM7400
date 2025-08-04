@@ -18,4 +18,5 @@ RAM7400 Project Notes
     1448: Chips are mounted.
     1519: Starting with wiring. Shortest lines first.
     1524: Something wierd in a drawing, will amend mine.
-    
+    1624: All single-pass wires in. What remains are the crossovers.
+     
