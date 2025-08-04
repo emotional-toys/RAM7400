@@ -59,15 +59,15 @@ What is nice about this RAM is that each bit is self-contained on each chip.  Th
 
 ![pinid](/images/7400-pinid.jpg)
 
+When it is 'latched', it is storing a bit.
+
+![latched](/images/latched.jpg)
+
 First task is to match gate assignments to pinouts to understand how the system is working.
 
 ![7400-diagram](/images/RAM7400.png)
 
-Shown here is the basic wiring diagram for each of the chips, representing one bit.  What it does is it turns the chip into a self-contained `D`-latch that consumes four NAND gates, hence the choice of QUAD NAND chips. On the wiring diagram, the lines that connect the pins are wires that need to be placed per IC. The functions `D`, `CLK`, `Q`, and `NOT Q` are purely internal connections. When it is 'latched', it is storing a bit.
-
-![latched](/images/latched.jpg)
-
-Connect `COMM` and `5V` pins to the rails. Given that the practise of pulldowns is _for unused inputs_, are there any in this arrangement? All inputs are being used, so pulldowns are _not_ necessary. The first-pass of wiring connections is in the following.
+Shown here is the basic wiring diagram for each of the chips, representing one bit.  What it does is it turns the chip into a self-contained `D`-latch that consumes four NAND gates, hence the choice of QUAD NAND chips. On the wiring diagram, the lines that connect the pins are wires that need to be placed per IC. The functions `D`, `CLK`, `Q`, and `NOT Q` are purely internal connections. Connect `COMM` and `5V` pins to the rails. Given that the practise of pulldowns is _for unused inputs_, are there any in this arrangement? All inputs are being used, so pulldowns are _not_ necessary. The first-pass of wiring connections is in the following.
 
 ![wiring-block-01](/images/wiring-block-01.jpg)
 
