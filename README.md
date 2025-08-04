@@ -46,7 +46,7 @@ Parts required for this feature are:
 
 * 8 - 74LS00 Quad NAND IC
 * 8 - 4.7k resistors (`D` latch)
-* 8 - 10k resistors (pullup)
+* 8 - 1k resistors (pulldown)
 * 2 - 0.1uF decoupling capacitors
 * 8 - 1N4148 diodes
 * 1 - 16cm breadboard with 63 rows
