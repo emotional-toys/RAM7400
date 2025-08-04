@@ -3,4 +3,6 @@ RAM7400 Project Notes
 
 03.08.2025
     1312: This project to learn about artificial reasoning, as a B-Class phenomenon.
+04.08.2025
+    1031: Resuming here then move to the board.
     
