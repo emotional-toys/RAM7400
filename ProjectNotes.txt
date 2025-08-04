@@ -12,4 +12,5 @@ RAM7400 Project Notes
     1156: Referenced and organized the initiatives. Now parts selection.
     1207: Was reading about the nybble and got stuck in a romantic setting.
     1312: Have the board ready before me and cleaned the text to focus the discussion that will follow.
+    1327: Parts spread-out for assembly, after the break.
     
