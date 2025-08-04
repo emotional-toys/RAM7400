@@ -55,15 +55,15 @@ Parts required for this feature are:
 
 ![pulldown](/images/pulldown.jpg) _Wiring a pulldown_
 
-What is nice about this RAM is that each bit is self-contained on each chip.  This means that 8 chips = 1 byte (8 bits) or 4 chips = 1 nybble. With self contained RAM bits, it is a cleaner test-implementation for one breadboard - line the chips up down the board where the pins are oriented the same way. To implement a single D-latch using either a 74HC00 CMOS chip or a 74LS00 TTL chip, the key differences above is the pull-down resistors and the smoothing capacitor to configure the gates for the TTL. The CMOS does not require these. 
-
-![7400-diagram](/images/RAM7400.png)
-
-Shown here is the basic wiring diagram for each of the chips, representing one bit.  What it does is it turns the chip into a self-contained `D`-latch that consumes four NAND gates, hence the choice of QUAD NAND chips. On the wiring diagram, the lines that connect the pins are wires that need to be placed per IC.  The functions `D`, `CLK`, `Q`, and `NOT Q` are purely internal connections. Connect `COMM` and `5V` pins to the rails. Given that the practise of pulldowns is _for unused inputs_, are there any in this arrangement?
+What is nice about this RAM is that each bit is self-contained on each chip.  This means that 8 chips = 1 byte (8 bits) or 4 chips = 1 nybble. With self contained RAM bits, it is a cleaner test-implementation for one breadboard - line the chips up down the board where the pins are oriented the same way. To implement a single D-latch using either a 74HC00 CMOS chip or a 74LS00 TTL chip, the key differences above is the pull-down resistors and the smoothing capacitor to configure the gates for the TTL. The CMOS does not require these.
 
 ![pinid](/images/7400-pinid.jpg)
 
-All inputs are being used, so pulldowns are _not_ necessary. The first-pass of wiring connections is in the following.
+First task is to match gate assignments to pinouts to understand how the system is working.
+
+![7400-diagram](/images/RAM7400.png)
+
+Shown here is the basic wiring diagram for each of the chips, representing one bit.  What it does is it turns the chip into a self-contained `D`-latch that consumes four NAND gates, hence the choice of QUAD NAND chips. On the wiring diagram, the lines that connect the pins are wires that need to be placed per IC.  The functions `D`, `CLK`, `Q`, and `NOT Q` are purely internal connections. Connect `COMM` and `5V` pins to the rails. Given that the practise of pulldowns is _for unused inputs_, are there any in this arrangement? All inputs are being used, so pulldowns are _not_ necessary. The first-pass of wiring connections is in the following.
 
 ![wiring-block-01](/images/wiring-block-01.jpg)
 
