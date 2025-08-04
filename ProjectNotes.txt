@@ -9,4 +9,5 @@ RAM7400 Project Notes
             1. The board containing the chips and passive components
             2. The 8-bit output circuit
     1034: Then this should be completed.
+    1156: Referenced and organized the initiatives. Now parts selection.
     
