@@ -2,6 +2,11 @@
 
 Self-satisfaction storage on the metal. On a breadboard and wired to the ideal-ttl board - A 7400 Quad-NAND into a D-latch to store data.
 
+### References
+
+* ideal-game-[ttl](https://github.com/emotional-toys/ideal-game-ttl)
+* aeon-[ttl](https://github.com/emotional-toys/aeon-ttl)
+
 ### Background
 
 Implementing [this](https://www.instructables.com/DIY-RAM-for-Your-Micro/) to test whether or not this will behave differently in its manifest functionally as compared to 74HC74.
