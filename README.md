@@ -60,6 +60,10 @@ What is nice about this RAM is that each bit is self-contained on each chip.  Th
 
 ![7400-diagram](/images/RAM7400.png)
 
+Given that the practise of pulldowns is _for unused inputs_, are there any in this arrangement?
+
+![pinout](/images/74LS00-pinout.png)
+
 Shown here is the basic wiring diagram for each of the chips.  What it does is it turns the chip into a self-contained D-latch; remember that a D-latch consumes four NAND gates, which there are 4 NAND gates per chip. On the wiring diagram, the lines that connect the pins are wires that you need to place on each chip.  You do not need to place wires leading out on the `D`, `CLK`, `Q`, and `NOT Q`. Connect `COMM` and `5V` pins to the rails.
 
 ![wiring-block-01](/images/wiring-block-01.jpg)
