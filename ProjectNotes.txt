@@ -10,4 +10,5 @@ RAM7400 Project Notes
             2. The 8-bit output circuit
     1034: Then this should be completed.
     1156: Referenced and organized the initiatives. Now parts selection.
+    1207: Was reading about the nybble and got stuck in a romantic setting.
     
