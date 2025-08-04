@@ -46,7 +46,6 @@ Parts required for this feature are:
 
 * 8 - 74LS00 Quad NAND IC
 * 8 - 4.7k resistors (`D` latch)
-* 8 - 1k resistors (pulldown)
 * 2 - 0.1uF decoupling capacitors
 * 8 - 1N4148 diodes
 * 1 - 16cm breadboard with 63 rows
@@ -60,11 +59,11 @@ What is nice about this RAM is that each bit is self-contained on each chip.  Th
 
 ![7400-diagram](/images/RAM7400.png)
 
-Given that the practise of pulldowns is _for unused inputs_, are there any in this arrangement?
+Shown here is the basic wiring diagram for each of the chips, representing one bit.  What it does is it turns the chip into a self-contained `D`-latch that consumes four NAND gates, hence the choice of QUAD NAND chips. On the wiring diagram, the lines that connect the pins are wires that need to be placed per IC.  The functions `D`, `CLK`, `Q`, and `NOT Q` are purely internal connections. Connect `COMM` and `5V` pins to the rails. Given that the practise of pulldowns is _for unused inputs_, are there any in this arrangement?
 
 ![pinid](/images/7400-pinid.jpg)
 
-Shown here is the basic wiring diagram for each of the chips.  What it does is it turns the chip into a self-contained D-latch; remember that a D-latch consumes four NAND gates, which there are 4 NAND gates per chip. On the wiring diagram, the lines that connect the pins are wires that you need to place on each chip.  You do not need to place wires leading out on the `D`, `CLK`, `Q`, and `NOT Q`. Connect `COMM` and `5V` pins to the rails.
+All inputs are being used, so pulldowns are _not_ necessary.
 
 ![wiring-block-01](/images/wiring-block-01.jpg)
 
