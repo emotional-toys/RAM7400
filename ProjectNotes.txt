@@ -20,4 +20,6 @@ RAM7400 Project Notes
     1524: Something wierd in a drawing, will amend mine.
     1624: All single-pass wires in. What remains are the crossovers.
     1745: Crossovers completed.
-     
+    1905: Will make one bit, then set for test. Idea is to finish aeon-ttl to the point of this board before completion.
+    1945: Best to do all: Position of input irrelevant and both are available to the board. Diodes and resistors in-place; a mistake in the design such that the lsb shares with the next-greatest one. Fixed by adding another shortboard to the end.
+    1946: Done for the day.
