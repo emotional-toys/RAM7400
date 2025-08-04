@@ -67,7 +67,7 @@ First task is to match gate assignments to pinouts to understand how the system 
 
 ![7400-diagram](/images/RAM7400.jpg)
 
-Shown here is the basic wiring diagram for each of the chips, representing one bit.  What it does is it turns the chip into a self-contained `D`-latch that consumes four NAND gates, hence the choice of QUAD NAND chips. On the wiring diagram, the lines that connect the pins are wires that need to be placed per IC. The functions `D`, `CLK`, `Q`, and `NOT Q` are purely internal connections. Connect `COMM` and `5V` pins to the rails. Given that the practise of pulldowns is _for unused inputs_, are there any in this arrangement? All inputs are being used, so pulldowns are _not_ necessary. The first-pass of wiring connections is in the following.
+Shown here is the basic wiring diagram for each of the chips, representing one bit.  What it does is it turns the chip into a self-contained `D`-latch that consumes four NAND gates, hence the choice of QUAD NAND chips. On the wiring diagram, the lines that connect the pins are wires that need to be placed per IC. The functions `D`, `CLK`, `Q`, and `NOT-Q` are purely internal connections. Connect `COMM` and `5V` pins to the rails. Given that the practise of pulldowns is _for unused inputs_, are there any in this arrangement? All inputs are being used, so pulldowns are _not_ necessary. The first-pass of wiring connections is in the following.
 
 ![wiring-block-01](/images/wiring-block-01.jpg)
 
@@ -77,11 +77,11 @@ Add a diode from the `Q` pin (either 10 or 11) to a free row on the breadboard. 
 
 ![board-diodes-resistors](/images/board-diodes-resistors.jpg)
 
-The D-latch is a neat device: It can store a bit by only changing when the clock signal is high, then it latches onto a bit. If `Q` is on, it sends a `HIGH` signal to the input of `NOT Q`, turning-off `NOT Q`. This, in turn, sends a `LOW` to the input of `Q`, turning `Q` on - this is how it latches. Note that in less-experimental future versions, a 74HC74 would be considered.
+The D-latch is a neat device: It can store a bit by only changing when the clock signal is high, then it latches onto a bit. If `Q` is on, it sends a `HIGH` signal to the input of `NOT-Q`, turning-off `NOT-Q`. This, in turn, sends a `LOW` to the input of `Q`, turning `Q` on - this is how it latches. Note that in less-experimental future versions, a 74HC74 would be considered.
 
 _Scenario_
 
-Assume that `NOT Q` is high. When a `HIGH` signal is sent to the clock and data, a `LOW` signal is sent to `Q` and a high is sent to `NOT Q`. This makes `Q`turn on and `NOT Q` turn off. When the clock is set `LOW`, the data line has no effect, so the circuit latches.
+Assume that `NOT-Q` is high. When a `HIGH` signal is sent to the clock and data, a `LOW` signal is sent to `Q` and a high is sent to `NOT-Q`. This makes `Q`turn on and `NOT-Q` turn off. When the clock is set `LOW`, the data line has no effect, so the circuit latches.
 
 In order to use the same pin to send and receive data, add a resistor and diode between the `Q` and `Data` signals. The diode is needed because the latch can be affected by changes on the `Q` pin and diodes restrict the current direction from `Q` to `Data`. The resistor is needed to limit the current going from `Q` to `Data`; otherwise without it, the latch would malfunction since `Q` would be pulled to ground.
 
