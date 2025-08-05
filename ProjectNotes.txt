@@ -23,3 +23,6 @@ RAM7400 Project Notes
     1905: Will make one bit, then set for test. Idea is to finish aeon-ttl to the point of this board before completion.
     1945: Best to do all: Position of input irrelevant and both are available to the board. Diodes and resistors in-place; a mistake in the design such that the lsb shares with the next-greatest one. Fixed by adding another shortboard to the end.
     1946: Done for the day.
+05.08.2025
+    1040: Today will return to aeon-ttl to move construction toward completion.
+     
