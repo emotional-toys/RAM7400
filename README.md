@@ -4,6 +4,7 @@ Self-satisfaction storage on the metal. On a breadboard and wired to the ideal-t
 
 ### References
 
+* [ideal](https://github.com/cartheur/ideal)
 * ideal-game-[ttl](https://github.com/emotional-toys/ideal-game-ttl)
 * aeon-[ttl](https://github.com/emotional-toys/aeon-ttl)
 
